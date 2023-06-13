@@ -1,0 +1,53 @@
+{
+    "identifier": "NFZ6547",
+    "country": "FRA",
+    "name": [
+        {"text": "LFPG-2"}
+    ],
+    "variant": "COMMON",
+    "type": "REQ_AUTHORISATION",
+    "reason": [
+        "AIR_TRAFFIC",
+        "OTHER"
+    ],
+    "otherReasonInfo": [
+        {
+            "text": "Flying Whales - part 2",
+            "lang": "en-GB"
+        },
+        {
+            "text": "Baleines Volantes 2-ème partie",
+            "lang": "fr-BE"
+        }
+    ],
+    "limitedApplicability": [
+        {
+            "startDateTime": "2018-12-31T15:59:59Z",
+            "endDateTime": "2019-12-31T15:59:59Z",
+            "schedule": [
+                {
+                    "day": ["ANY"],
+                    "startTime": "16:00:00Z",
+                    "endTime": "17:00:00Z"
+                },
+                {
+                    "day": ["SUN"],
+                    "startTime": "10:00:00Z",
+                    "endTime": "12:00:00Z"
+                }
+            ]
+        }
+    ],
+    "zoneAuthority": [
+        {
+            "name": [
+                {
+                    "text": "LFPG-UASZoneManager",
+                    "lang": "en-us"
+                }
+            ],
+            "email": "UASZoneManager@lfpg.fr",
+            "purpose": "AUTHORIZATION"
+        }
+    ]
+}

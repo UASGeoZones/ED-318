@@ -1,0 +1,73 @@
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "GeometryCollection",
+        "geometries": [
+            {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            2.585866,
+                            49.029301
+                        ],
+                        [
+                            2.610414,
+                            48.983358
+                        ],
+                        [
+                            2.731263,
+                            48.987301
+                        ],
+                        [
+                            2.704141,
+                            49.044704
+                        ],
+                        [
+                            2.585866,
+                            49.029301
+                        ]
+                    ]
+                ],
+                "layer": {
+                    "upper": 150,
+                    "upperReference": "AGL",
+                    "lower": 50,
+                    "lowerReference": "AGL",
+                    "uom": "m"
+                }
+            },
+            {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            2.595866,
+                            49.024301
+                        ],
+                        [
+                            2.701263,
+                            49.007301
+                        ],
+                        [
+                            2.664141,
+                            49.034704
+                        ],
+                        [
+                            2.595866,
+                            49.024301
+                        ]
+                    ]
+                ],
+                "layer": {
+                    "upper": 50,
+                    "upperReference": "AGL",
+                    "lower": 0,
+                    "lowerReference": "AGL",
+                    "uom": "m"
+                }
+            }
+        ]
+    },
+    "properties": {}
+}
