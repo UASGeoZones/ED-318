@@ -82,7 +82,7 @@ def main():
         with open(instance_path, "r") as f:
             instance_content = json.load(f)
 
-        errors = validate(schema_path, schema_jsonpath, instance_content)
+        errors = validate(schema_path, schema_jsonpath, instance_content, example_jsonpath)
         if errors:
             print(f"{example}: {len(errors)} errors found")
             for e in errors:
