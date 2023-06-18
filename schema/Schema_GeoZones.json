@@ -25,13 +25,11 @@
                     "oneOf": [
                         {"type": "null"},
                         {
-                            "type": "object",
                             "$ref": "./Schema_GeoZoneProperties.json"
                         }
                     ]
                 },
                 "geometry": {
-                    "type": "object",
                     "$ref": "./Schema_GeoJSONGeometries.json"
                 },
                 "bbox": {
@@ -78,7 +76,6 @@
                                 "oneOf": [
                                     {"type": "null"},
                                     {
-                                        "type": "object",
                                         "$ref": "./Schema_GeoZoneProperties.json"
                                     }
                                 ]
@@ -87,7 +84,6 @@
                                 "oneOf": [
                                     {"type": "null"},
                                     {
-                                        "type": "object",
                                         "$ref": "./Schema_GeoJSONGeometries.json"
                                     }
                                 ]
@@ -114,7 +110,6 @@
         "items": {"type": "number"}
     },
     "metadata": {
-        "type": "object",
         "$ref": "./Schema_GeoZoneCollectionMetadata.json"
     }
 }
