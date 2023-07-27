@@ -5,6 +5,7 @@ import os.path
 from dataclasses import dataclass
 import json
 from pathlib import Path
+import sys
 from typing import List, Optional
 
 import bc_jsonpath_ng
@@ -64,33 +65,54 @@ def validate(schema_path: str, object_path: str, instance: dict, instance_path: 
     return result
 
 
-def main():
+def main() -> bool:
     root = os.path.realpath(os.path.join(os.path.split(__file__)[0], ".."))
 
-    # (Example file minus extension, JSONPath in example object, schema file minus extension, JSONPath in schema)
+    # Columns:
+    #   * Example file minus extension
+    #   * JSONPath in example object
+    #   * Schema file minus extension
+    #   * JSONPath in schema
+    #   * Whether example file should validate successfully
     to_validate = (
-        ("Example_GeoZone_2_Layers",         "$", "Schema_GeoZones",          "$"),
-        ("PartialExample_featureGeoJSON",    "$", "Schema_GeoZones",          "$"),
-        ("PartialExample_GeoZoneProperties", "$", "Schema_GeoZoneProperties", "$"),
-        ("PartialExample_TimePeriod",        "$", "Schema_GeoZoneTimePeriod", "$"),
-        ("PartialExample_ZoneAuthority",     "$", "Schema_GeoZoneAuthority",  "$"),
+        ("Example_GeoZone_2_Layers",         "$", "Schema_GeoZones",          "$", True),
+        ("Example_GeoZone_Circle",           "$", "Schema_GeoZones",          "$", True),
+        ("InvalidExample_GeoZone_2_Layers",  "$", "Schema_GeoZones",          "$", False),
+        ("PartialExample_featureGeoJSON",    "$", "Schema_GeoZones",          "$", True),
+        ("PartialExample_GeoZoneProperties", "$", "Schema_GeoZoneProperties", "$", True),
+        ("PartialExample_TimePeriod",        "$", "Schema_GeoZoneTimePeriod", "$", True),
+        ("PartialExample_ZoneAuthority",     "$", "Schema_GeoZoneAuthority",  "$", True),
     )
 
-    for example, example_jsonpath, schema_file, schema_jsonpath in to_validate:
+    success = True
+    for example, example_jsonpath, schema_file, schema_jsonpath, should_validate in to_validate:
         schema_path = os.path.join(root, "schema", schema_file + ".json")
         instance_path = os.path.join(root, "examples", example + ".json")
         with open(instance_path, "r") as f:
             instance_content = json.load(f)
 
         errors = validate(schema_path, schema_jsonpath, instance_content, example_jsonpath)
-        if errors:
-            print(f"{example}: {len(errors)} errors found")
-            for e in errors:
-                print(f"  * {e.json_path}: {e.message}")
-                print()
+        if should_validate:
+            if errors:
+                print(f"{example}: {len(errors)} errors found")
+                for e in errors:
+                    print(f"  * {e.json_path}: {e.message}")
+                    print()
+                success = False
+            else:
+                print(f"{example}: No errors found.")
         else:
-            print(f"{example}: No errors found.")
+            if errors:
+                print(f"{example}: Correctly found {len(errors)} errors.")
+            else:
+                print(f"{example}: INCORRECTLY found no errors")
+                success = False
+
+    return success
 
 
 if __name__ == "__main__":
-    main()
+    if main():
+        sys.exit(os.EX_OK)
+    else:
+        sys.exit(os.EX_SOFTWARE)
