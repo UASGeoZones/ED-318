@@ -1,17 +1,32 @@
 {
-    "startDateTime": "2018-12-31T15:59:59Z",
-    "endDateTime": "2019-12-31T15:59:59Z",
-    "schedule": [
-        {
-            "day": ["ANY"],
-            "startTime": "16:00:00Z",
-            "startEvent": "SR",
-            "endTime": "17:00:00Z"
-        },
-        {
-            "day": ["SUN"],
-            "startTime": "10:00:00Z",
-            "endTime": "12:00:00Z"
-        }
-    ]
-}
+                        "startDateTime": "2023-10-29T00:00:00Z",
+                        "endDateTime": "2024-03-31T23:59:59Z",
+                        "schedule": [
+                            {
+                                "day": ["ANY"],
+                                "startTime": "16:00:00Z",
+                                "endTime": "17:00:00Z"
+                            },
+                            {
+                                "day": ["SUN"],
+                                "startTime": "10:00:00Z",
+                                "endTime": "12:00:00Z"
+                            }
+                        ]
+                    },
+                     {
+                        "startDateTime": "2024-04-01T00:00:00Z",
+                        "endDateTime": "2024-10-28T23:59:59Z",
+                        "schedule": [
+                            {
+                                "day": ["ANY"],
+                                "startTime": "15:00:00Z",
+                                "endTime": "16:00:00Z"
+                            },
+                            {
+                                "day": ["SUN"],
+                                "startTime": "09:00:00Z",
+                                "endTime": "11:00:00Z"
+                            }
+                        ]
+                    }
