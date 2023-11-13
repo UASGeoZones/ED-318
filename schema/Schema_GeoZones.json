@@ -96,6 +96,7 @@
                         }
                     }
                 },
+                "name": {"type": "string"},
                 "bbox": {
                     "type": "array",
                     "minItems": 4,
