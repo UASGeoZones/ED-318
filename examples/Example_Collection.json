@@ -81,7 +81,8 @@
                 "identifier": "NFZ6547",
                 "country": "FRA",
                 "name": [
-                    {"text": "LFPG-2"}
+                    {"text": "LFPG-2", 
+                    "lang": "en-GB"}
                 ],
                 "variant": "COMMON",
                 "type": "REQ_AUTHORIZATION",
@@ -155,7 +156,8 @@
                 "identifier": "ABC1234",
                 "country": "FRA",
                 "name": [
-                    {"text": "Fictitious circle"}
+                    {"text": "Fictitious circle", 
+                    "lang": "en-GB"}
                 ],
                 "variant": "COMMON",
                 "type": "PROHIBITED",

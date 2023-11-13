@@ -33,8 +33,8 @@
                     "POPULATION",
                     "NATURE",
                     "NOISE",
-                    "FOREIGN_TERRITORY",
                     "EMERGENCY",
+                    "DAR",
                     "OTHER"
                 ]
             }
@@ -87,8 +87,24 @@
                     "type": "string",
                     "maxLength": 5
                 }
-            }
-        }
+            },
+            "required": ["lang"]
+        },
+        "textLongType": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string",
+                    "maxLength": 1000
+                },
+                "lang": {
+                    "type": "string",
+                    "maxLength": 5
+                }
+            },
+            "required": ["lang"]
+        },
+        "URNType": {"type": "string"}
     },
     "properties": {},
     "required": []

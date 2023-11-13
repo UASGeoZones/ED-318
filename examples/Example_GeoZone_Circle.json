@@ -30,7 +30,8 @@
                 "identifier": "ABC1234",
                 "country": "FRA",
                 "name": [
-                    {"text": "Fictitious circle"}
+                    {"text": "Fictitious circle",
+                    "lang": "en-GB"}
                 ],
                 "variant": "COMMON",
                 "type": "PROHIBITED",
