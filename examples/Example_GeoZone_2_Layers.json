@@ -84,7 +84,7 @@
                     {"text": "LFPG-2"}
                 ],
                 "variant": "COMMON",
-                "type": "REQ_AUTHORISATION",
+                "type": "REQ_AUTHORIZATION",
                 "reason": [
                     "AIR_TRAFFIC",
                     "OTHER"

@@ -9,7 +9,7 @@
             "enum": [
                 "USPACE",
                 "PROHIBITED",
-                "REQ_AUTHORISATION",
+                "REQ_AUTHORIZATION",
                 "CONDITIONAL",
                 "NO_RESTRICTION"
             ]
