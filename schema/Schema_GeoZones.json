@@ -96,7 +96,10 @@
                         }
                     }
                 },
-                "name": {"type": "string"},
+                "name": {
+                    "type": "string",
+                    "maxLength": 200
+                },
                 "bbox": {
                     "type": "array",
                     "minItems": 4,
