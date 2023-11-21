@@ -29,6 +29,7 @@
                 "$ref": "./Schema_GeoZoneDataTypes.json#/definitions/textShortType"
             }
         },
+        "otherGeoid": {"$ref": "./Schema_GeoZoneDataTypes.json#/definitions/URNType"},
         "technicalLimitations": {
             "type": "array",
             "items": {
