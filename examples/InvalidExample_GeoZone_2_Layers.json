@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "title": "SampleUAS GeoZOnes",
+  "title": "SampleUAS GeoZones",
   "metadata": {
     "validFrom": {
       "purposely_invalid": "This object is not a datetime"
@@ -124,7 +124,7 @@
             "name": [
               {
                 "text": "LFPG-UASZoneManager",
-                "lang": "en-us"
+                "lang": "en-US"
               }
             ],
             "email": "UASZoneManager@lfpg.fr",
