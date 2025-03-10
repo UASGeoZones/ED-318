@@ -48,6 +48,7 @@
             "type": "array",
             "items": {"$ref": "./Schema_GeoZoneTimePeriod.json"}
         },
+        "dataSource": {"$ref": "./Schema_GeoZoneDataTypes.json#/definitions/metadata"},
         "extendedProperties": {"type": "object"}
     },
     "required": [
