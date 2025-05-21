@@ -1,16 +1,16 @@
 {
-                        "startDateTime": "2023-10-29T00:00:00Z",
-                        "endDateTime": "2024-03-31T23:59:59Z",
-                        "schedule": [
-                            {
-                                "day": ["ANY"],
-                                "startTime": "16:00:00Z",
-                                "endTime": "17:00:00Z"
-                            },
-                            {
-                                "day": ["SUN"],
-                                "startTime": "10:00:00Z",
-                                "endTime": "12:00:00Z"
-                            }
-                        ]
-                    }
+    "startDateTime": "2023-10-29T00:00:00Z",
+    "endDateTime": "2024-03-31T23:59:59Z",
+    "schedule": [
+        {
+            "day": ["ANY"],
+            "startTime": "16:00:00Z",
+            "endTime": "17:00:00Z"
+        },
+        {
+            "day": ["SUN"],
+            "startTime": "10:00:00Z",
+            "endTime": "12:00:00Z"
+        }
+    ]
+}
