@@ -104,7 +104,23 @@
             },
             "required": ["lang"]
         },
-        "URNType": {"type": "string"}
+        "URNType": {"type": "string"},
+        "metadata": {
+            "type": "object",
+            "properties": {
+                "creationDate": {
+                    "type": "string",
+                    "format": "DateTimeType"
+                },
+                "updateDateTime": {
+                    "type": "string",
+                    "format": "DateTimeType"
+                },
+                "originator": {
+                    "$ref": "#/definitions/textShortType"
+                }
+            }
+        }
     },
     "properties": {},
     "required": []
