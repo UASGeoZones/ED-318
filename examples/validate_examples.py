@@ -78,7 +78,7 @@ def main() -> bool:
         ("Example_GeoZone_2_Layers",         "$", "Schema_GeoZones",          "$", True),
         ("Example_GeoZone_Circle",           "$", "Schema_GeoZones",          "$", True),
         ("InvalidExample_GeoZone_2_Layers",  "$", "Schema_GeoZones",          "$", False),
-        ("PartialExample_featureGeoJSON",    "$", "Schema_GeoZones",          "$", True),
+        ("PartialExample_featureGeoJSON",    "$", "Schema_LayeredGeoJSON",    "$", True),
         ("PartialExample_GeoZoneProperties", "$", "Schema_GeoZoneProperties", "$", True),
         ("PartialExample_TimePeriod",        "$", "Schema_GeoZoneTimePeriod", "$", True),
         ("PartialExample_ZoneAuthority",     "$", "Schema_GeoZoneAuthority",  "$", True),
